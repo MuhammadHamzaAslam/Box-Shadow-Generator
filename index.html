@@ -9,48 +9,43 @@
 </head>
 
 <body>
-    <div id="box">
+    <div class="container">
+        <h1>Box Shadow Generator</h1>
+        <div id="box" class="box"></div>
+        <div id="main">
+            <div class="card">
+                <label for="h-shadow">Horizontal Shadow</label>
+                <input type="range" id="h-shadow" value="0" min="-50" max="50" oninput="generate()">
+            </div>
 
+            <div class="card">
+                <label for="v-shadow">Vertical Shadow</label>
+                <input type="range" id="v-shadow" value="0" min="-50" max="50" oninput="generate()">
+            </div>
+
+            <div class="card">
+                <label for="b-radius">Blur Radius</label>
+                <input type="range" id="b-radius" value="0" min="0" max="100" oninput="generate()">
+            </div>
+
+            <div class="card">
+                <label for="s-radius">Spread Radius</label>
+                <input type="range" id="s-radius" value="0" min="-50" max="50" oninput="generate()">
+            </div>
+
+            <div class="card">
+                <label for="s-color">Shadow Color</label>
+                <input type="color" id="s-color" value="#000000" oninput="generate()">
+            </div>
+
+            <div class="card">
+                <label for="inset">Inset</label>
+                <input type="checkbox" id="inset" oninput="generate()">
+            </div>
+        </div>
+        <textarea id="copyArea" rows="2" readonly></textarea>
+        <button id="copy" onclick="copyText()">Copy</button>
     </div>
-    <div id="main">
-        <div id="cards">
-            <label for="Horizontal Shadow">Horizontal Shadow</label>
-            <br>
-            <input type="range" name="" id="h-shadow" max="50" min="-50">
-        </div>
-
-        <div id="cards">
-            <label for="Vertical Shadow">Vertical Shadow</label>
-            <br>
-            <input type="range" name="" id="v-shadow" max="50" min="-50">
-        </div>
-
-        <div id="cards">
-            <label for="Blur Radius">Blur Radius</label>
-            <br>
-            <input type="range" name="" id="b-radius" max="50" min="-50">
-        </div>
-
-        <div id="cards">
-            <label for="Spread Radius">Spread Radius</label>
-            <br>
-            <input type="range" name="" id="s-radius" max="50" min="-50">
-        </div>
-
-        <div id="cards">
-            <label for="Shadow Color">Shadow Color</label>
-            <br>
-            <input type="color" name="" id="s-color" max="50" min="-50">
-        </div>
-
-        <div id="cards">
-            <label for="Shadow Color Opacity">Shadow Color Opacity</label>
-            <br>
-            <input type="range" name="" id="s-color-o" max="50" min="-50">
-        </div>
-    </div>
-    <button id="add">Add</button>
-
 
     <script src="app.js"></script>
 </body>

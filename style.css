@@ -30,8 +30,8 @@ h1 {
 
 #box {
     width: 200px;
-    height: 200px;
-    background-color: #e0e0e0;
+    height: 50px;
+    background-color: black;
     margin-bottom: 20px;
     transition: box-shadow 0.3s ease-in-out;
 }
@@ -110,4 +110,24 @@ button:hover {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3;
 }

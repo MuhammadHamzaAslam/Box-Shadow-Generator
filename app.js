@@ -18,5 +18,9 @@ function copyText() {
     copyText.select();
     copyText.setSelectionRange(0, 99999); 
     document.execCommand("copy");
-    alert("Copied the text: " + copyText.value);
+    Swal.fire({
+        title: "Good job!",
+        text: "You Copied The Text",
+        icon: "success"
+      });
 }
